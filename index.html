@@ -1,0 +1,104 @@
+// filepath: /Users/eren/Documents/JavaScript/Human vs AI Detector Game/index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Human vs AI Detector</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="background-blur blur-one"></div>
+    <div class="background-blur blur-two"></div>
+
+    <div class="app-shell">
+      <header class="hero-card">
+        <div class="hero-copy">
+          <p class="eyebrow">Hybrid Reality Lab</p>
+          <h1>Human vs AI Detector</h1>
+          <p class="hero-text">
+            Spot the telltale signs across images, text, code, voice, and artwork.
+            One round at a time.
+          </p>
+        </div>
+
+        <div class="player-card">
+          <label for="player-name">Alias</label>
+          <input id="player-name" maxlength="16" value="Player" />
+          <button id="start-over-btn" class="secondary-btn">Reset</button>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <span class="stat-label">Score</span>
+          <strong id="score-value">0</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Streak</span>
+          <strong id="streak-value">0</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Accuracy</span>
+          <strong id="correct-value">0/0</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Round</span>
+          <strong id="round-counter">1/10</strong>
+        </article>
+      </section>
+
+      <main class="game-grid">
+        <section class="panel prompt-panel">
+          <div class="round-meta">
+            <span id="round-label" class="pill">Round 1/10</span>
+            <span id="difficulty-pill" class="pill">Difficulty EASY</span>
+          </div>
+
+          <div class="prompt-body">
+            <h2 id="prompt-title">Loading challenge...</h2>
+            <p id="prompt-copy">Preparing the next signal...</p>
+          </div>
+
+          <div id="media-host" class="media-host"></div>
+
+          <div class="timer-row">
+            <div class="timer-bar">
+              <div id="timer-fill"></div>
+            </div>
+            <div id="timer-text">⏳ 15s</div>
+          </div>
+        </section>
+
+        <aside class="panel action-panel">
+          <h3>Who created this?</h3>
+          <p class="muted">
+            Choose Human or AI. The explanation appears after you commit.
+          </p>
+
+          <div class="choice-group">
+            <button id="btn-human" class="choice-btn">Human</button>
+            <button id="btn-ai" class="choice-btn">AI</button>
+          </div>
+
+          <div class="control-row">
+            <button id="next-btn" class="secondary-btn hidden">Next Round</button>
+            <button id="play-voice-btn" class="ghost-btn hidden">Play sample</button>
+          </div>
+
+          <div id="feedback-panel" class="feedback-panel hidden"></div>
+        </aside>
+      </main>
+
+      <section class="panel board-panel">
+        <div class="board-header">
+          <h3>Leaderboard</h3>
+          <span class="muted">Local runs saved in this browser</span>
+        </div>
+        <ol id="leaderboard-list" class="leaderboard-list"></ol>
+      </section>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
