@@ -1,4 +1,3 @@
-// filepath: /Users/eren/Documents/JavaScript/Human vs AI Detector Game/app.js
 const STORAGE_KEY = "human-vs-ai-detector-leaderboard";
 const NAME_KEY = "human-vs-ai-detector-name";
 const ROUND_COUNT = 10;
